@@ -8,15 +8,8 @@ var port = process.env.PORT || 8080
 var bodyParser = require('body-parser')
 var methodOverride = require('method-override')
 var http = require('http')
-var MongoClient = require('mongodb').MongoClient;
 
 // DATBASE CRUMS ======================================
-
-MongoClient.connect('mongodb://usc_admin:admin1@ds031701.mongolab.com:31701/usc_web', function(err, db) {
-    if (err) throw err;
-    console.log("Connected to Database");
-    _db = db //this is our global database object
-})
 
 app.use(bodyParser.json()) // get information from html forms
 app.use(bodyParser.urlencoded({
@@ -24,10 +17,9 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(express.static(__dirname + '/public'))
 
-
-
-// routes ======================================================================
-require('./app/routes.js')(app) // load our routes and pass in our app and fully configured passport
+app.get('/', function(req, res) {
+    res.send('/index.html');
+});
 
 // launch ======================================================================
 app.listen(port)
