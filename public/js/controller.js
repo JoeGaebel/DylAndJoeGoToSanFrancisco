@@ -19,9 +19,15 @@ app.config(function($routeProvider, $locationProvider) {
 
 });
 
+function blur() {
+    $('.shouldBlur').blur();
+}
+
 app.controller('mainController', function($scope) {
 
-
+    $scope.$on('$routeChangeSuccess', function(next, current) {
+        blur();
+    });
 
 
 
