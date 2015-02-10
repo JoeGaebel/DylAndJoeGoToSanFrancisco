@@ -18,9 +18,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(__dirname + '/public'))
 
 app.get('/*', function(req, res) {
-    res.send('/index.html');
+    res.sendfile('./public/index.html'); //sendfile is so key, thas mah GIRL
 });
-
 // launch ======================================================================
 app.listen(port)
 console.log('The magic happens on port ' + port)
