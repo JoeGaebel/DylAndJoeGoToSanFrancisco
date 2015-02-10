@@ -92,9 +92,13 @@ ul.nav-pills  {
 	background-color: #000;
 }
 
-
+.fullBody {
+  padding-right: 0px;
+    padding-left: 0px;
+}
 .slider {
-	margin-top:10px;
+	margin-top:0px;
+  
 	margin-bottom:-30px;
 }
 /* --- section box --- */

@@ -57,10 +57,10 @@
 <!-- SET THE CONTROLLER AND GET ALL TODOS -->
 
 <body ng-controller="mainController">
-    <div ng-view class="container" id="border">
 
-
-    </div>
+      <div class="view-animate-container">
+    <div ng-view class="view-animate"></div>
+  </div>
 
     <footer>
         <section id="footer" class="section footer">
@@ -86,4 +86,7 @@
 
 </body>
 
+
+    <script src="js/wow.min.js"></script>
+    <script src="js/functions.js"></script> 
 </html>
