@@ -143,6 +143,16 @@ ul.nav-pills  {
           transition: all .2s ease-in-out;
 }
 
+.logo {
+	width:400px;
+	height: 300px;
+}
+
+
+.pad{
+	padding-top: 3%;
+}
+
 .navbar-default {
 	top: -10;
 	left: 0;
