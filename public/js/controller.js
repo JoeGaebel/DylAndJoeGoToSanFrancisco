@@ -13,6 +13,11 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: 'blog.html',
         controller: 'mainController'
     })
+
+    .when('/companies', {
+        templateUrl: 'companies.html',
+        controller: 'mainController'
+    })
     //===================================================
 
     $locationProvider.html5Mode(true);
