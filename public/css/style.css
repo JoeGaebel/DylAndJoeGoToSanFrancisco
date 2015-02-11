@@ -787,10 +787,3 @@ blockquote cite {
 blockquote cite:before {
     content: "\2014 \2009";
 }
-@media only screen and (max-device-width: 480px) {
-    align-center {
-    	text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
