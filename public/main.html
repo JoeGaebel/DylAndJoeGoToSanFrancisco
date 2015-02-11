@@ -1,45 +1,83 @@
 <script type="text/javascript">
-    /*
-* This is the plugin
-*/
-(function(a){a.createModal=function(b){defaults={title:"",message:"Your Message Goes Here!",closeButton:true,scrollable:false};var b=a.extend({},defaults,b);var c=(b.scrollable===true)?'style="max-height: 420px;overflow-y: auto;"':"";html='<div class="modal fade" id="myModal">';html+='<div class="modal-dialog">';html+='<div class="modal-content">';html+='<div class="modal-header">';html+='<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';if(b.title.length>0){html+='<h4 class="modal-title">'+b.title+"</h4>"}html+="</div>";html+='<div class="modal-body" '+c+">";html+=b.message;html+="</div>";html+='<div class="modal-footer">';if(b.closeButton===true){html+='<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>'}html+="</div>";html+="</div>";html+="</div>";html+="</div>";a("body").prepend(html);a("#myModal").modal().on("hidden.bs.modal",function(){a(this).remove()})}})(jQuery);
+new WOW().init();
+
 
 /*
-* Here is how you use it
-*/
-$(function(){    
-
-    $('.view-pdf').on('click',function(){
-        var pdf_link = $(this).attr('href');
-        var iframe = '<div class="iframe-container"><iframe src="'+pdf_link+'"></iframe></div>'
-
-       $.createModal({
-        title:'My Title',
-        width:0,
-        message: iframe,
-        closeButton:true,
-        scrollable:false,
-        buttons: {
-            OK: function() {
-                alert('PL');
-            }
+ * This is the plugin
+ */
+(function(a) {
+    a.createModal = function(b) {
+        defaults = {
+            title: "",
+            message: "Your Message Goes Here!",
+            closeButton: true,
+            scrollable: false
+        };
+        var b = a.extend({}, defaults, b);
+        var c = (b.scrollable === true) ? 'style="max-height: 420px;overflow-y: auto;"' : "";
+        html = '<div class="modal fade" id="myModal">';
+        html += '<div class="modal-dialog">';
+        html += '<div class="modal-content">';
+        html += '<div class="modal-header">';
+        html += '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
+        if (b.title.length > 0) {
+            html += '<h4 class="modal-title">' + b.title + "</h4>"
         }
+        html += "</div>";
+        html += '<div class="modal-body" ' + c + ">";
+        html += b.message;
+        html += "</div>";
+        html += '<div class="modal-footer">';
+        if (b.closeButton === true) {
+            html += '<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>'
+        }
+        html += "</div>";
+        html += "</div>";
+        html += "</div>";
+        html += "</div>";
+        a("body").prepend(html);
+        a("#myModal").modal().on("hidden.bs.modal", function() {
+            a(this).remove()
+        })
+    }
+})(jQuery);
+
+/*
+ * Here is how you use it
+ */
+$(function() {
+
+    $('.view-pdf').on('click', function() {
+        var pdf_link = $(this).attr('href');
+        var iframe = '<div class="iframe-container"><iframe src="' + pdf_link + '"></iframe></div>'
+
+        $.createModal({
+            title: 'My Title',
+            width: 0,
+            message: iframe,
+            closeButton: true,
+            scrollable: false,
+            buttons: {
+                OK: function() {
+                    alert('PL');
+                }
+            }
         });
 
-       
-        return false;  
+
+        return false;
 
     });
 })
 </script>
 
 <style type="text/css">
-    
-        .iframe-container {    
+.iframe-container {
     padding-bottom: 60%;
-    padding-top: 30px; height: 0; overflow: hidden;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
 }
- 
 .iframe-container iframe,
 .iframe-container object,
 .iframe-container embed {
@@ -51,90 +89,86 @@ $(function(){
 }
 </style>
 
- <div class="slider"> 
+<div class="slider">
 
-             <div class="profile-img">
-              <img src="img/bg-main1.jpg" alt="" class="img-responsive" />
-            </div>  
-
-            <div class="container">
-    <div class="row">
-        <h2>PDF, Joe</h2>
-        <a class="btn btn-primary view-pdf" href="img/resumes/dharness_resume.pdf">View PDF</a>        
+    <div class="profile-img">
+        <img src="img/bg-main1.jpg" alt="" class="img-responsive" />
     </div>
+
+    <div class="container">
+        <div class="row">
+            <h2>PDF, Joe</h2>
+            <a class="btn btn-primary view-pdf" href="img/resumes/dharness_resume.pdf">View PDF</a>
+        </div>
+    </div>
+
 </div>
-                 
-    </div>     
-  
-        <!-- column content -->
-        <div id="main-content">
-            <div class="container">
-                <div class="row">
-                    <div class="big-box">
-                        <div class="col-lg-12">
-                            <div class="col-md-4">
-                                <div class="box-bg">
-                                    <div class="wow bounceInLeft" data-wow-duration="2s" data-wow-delay="0.9s">
-                                        <div class="align-center">
-                                            <i class="fa fa-camera-retro fa-5x"></i>
-                                            <h4 class="text-bold">Customizable</h4>
-                                            <p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="box-bg">
-                                    <div class="wow bounceInLeft" data-wow-duration="2s" data-wow-delay="0.6s">
-                                        <div class="align-center">
-                                            <i class="fa fa-shield fa-5x"></i>
-                                            <h4 class="text-bold">Valid HTML5</h4>
-                                            <p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="box-bg">
-                                    <div class="wow bounceInLeft" data-wow-duration="2s" data-wow-delay="0.2s">
-                                        <div class="align-center">
-                                            <i class="fa fa-circle fa-5x"></i>
-                                            <h4 class="text-bold">Responsive</h4>
-                                            <p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.
-                                            </p>
-                                        </div>
-                                    </div>
+
+<!-- column content -->
+<div id="main-content">
+    <div class="container">
+        <div class="row">
+            <div class="big-box">
+                <div class="col-lg-12">
+                    <div class="col-md-6">
+                        <div class="box-bg">
+                            <div class="wow bounceInLeft" data-wow-duration="2s" data-wow-offset="800">
+                                <div class="align-center">
+                                    <img class='fa fa-5x' src="/img/resume.svg"></img>
+                                    <h4 class="text-bold">Dyl's Resume</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="wow bounceInRight">
-                        <div class="col-lg-6">
-                            <h4>Maecenas luctus</h4>
-                            <p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</p>
-                            <a href="#" class="thumbnail">
-                                <img src="img/thumbnails/outline-1.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="wow bounceInLeft">
-                        <div class="col-lg-6">
-                            <h4>Maecenas luctus</h4>
-                            <p>Lorem ipsum dolor sit amet, mutat graeco volumus ad eam, singulis patrioque comprehensam nam no. Mei cu dicat voluptaria volumus.</p>
-                            <a href="#" class="thumbnail">
-                                <img src="img/thumbnails/ipad.jpg" alt="">
-                            </a>
+                    <div class="col-md-6">
+                        <div class="box-bg">
+                            <div class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="800">
+                                <div class="align-center">
+                                    <img class='fa fa-5x' src="/img/resume.svg"></img>
+                                    <h4 class="text-bold">Joe's Resume</h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="800">
+                <div class="col-lg-6">
+                    <img class='fa fa-5x' src="/img/github.svg" width='15%'></img>
+                    <h4>Dylan's Github</h4>
+                </div>
+            </div>
+            <div class="wow bounceInLeft" data-wow-duration="2s" data-wow-offset="800">
+                <div class="col-lg-6">
+                    <img class='fa fa-5x' src="/img/github.svg" width='15%'></img>
+                    <h4>Joe's Github</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="wow bounceInUp" data-wow-duration="2s" data-wow-offset="800">
+                <div class="col-lg-6">
+                    <img class='fa fa-5x' src="/img/linkedin.svg" width='15%'></img>
+                    <h4>Dylan's LinkedIn</h4>
+                </div>
+            </div>
+            <div class="wow bounceInUp" data-wow-duration="2s" data-wow-offset="800">
+                <div class="col-lg-6">
+                    <img class='fa fa-5x' src="/img/linkedin.svg" width='15%'></img>
+                    <h4>Joe's LinkedIn</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <script src="js/wow.min.js"></script>
-    <script src="js/functions.js"></script> 
+<script src="js/wow.min.js"></script>
+<script src="js/functions.js"></script>
