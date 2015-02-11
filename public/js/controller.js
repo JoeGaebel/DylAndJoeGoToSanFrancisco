@@ -18,6 +18,11 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: 'companies.html',
         controller: 'mainController'
     })
+
+    .when('/map', {
+        templateUrl: 'map.html',
+        controller: 'mainController'
+    })
     //===================================================
 
     $locationProvider.html5Mode(true);
