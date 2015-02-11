@@ -96,6 +96,11 @@ ul.nav-pills  {
   padding-right: 0px;
     padding-left: 0px;
 }
+
+.paragraph {
+	width: 70%;
+	text-align: left;
+}
 .slider {
 	margin-top:0px;
   
