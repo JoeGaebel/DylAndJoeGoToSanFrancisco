@@ -819,3 +819,19 @@ a.scrollup:hover{
 	opacity:1;
 	color:#fff;
 }
+
+.profile-img {
+width: 100%;
+position: relative;
+}
+
+.img-responsive {
+/*max-width:100%;*/
+/*height:auto;*/
+}
+
+.img-circle {
+position:absolute;
+z-index:99;
+/*top:-50%;*/
+}
