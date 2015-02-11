@@ -143,6 +143,15 @@ ul.nav-pills  {
           transition: all .2s ease-in-out;
 }
 
+.navbar-default {
+	top: 0;
+	left: 0;
+	height: 50px;
+	padding-top: 0;
+	background-color: #3d3a44;
+	border-color: #3d3a44;
+}
+
 /*===========================
   Portfolio
 ============================ */

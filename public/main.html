@@ -3,71 +3,71 @@ new WOW().init();
 
 
 /*
- * This is the plugin
- */
+* This is the plugin
+*/
 (function(a) {
-    a.createModal = function(b) {
-        defaults = {
-            title: "",
-            message: "Your Message Goes Here!",
-            closeButton: true,
-            scrollable: false
-        };
-        var b = a.extend({}, defaults, b);
-        var c = (b.scrollable === true) ? 'style="max-height: 420px;overflow-y: auto;"' : "";
-        html = '<div class="modal fade" id="myModal">';
-        html += '<div class="modal-dialog">';
+a.createModal = function(b) {
+defaults = {
+title: "",
+message: "Your Message Goes Here!",
+closeButton: true,
+scrollable: false
+};
+var b = a.extend({}, defaults, b);
+var c = (b.scrollable === true) ? 'style="max-height: 420px;overflow-y: auto;"' : "";
+html = '<div class="modal fade" id="myModal">';
+    html += '<div class="modal-dialog">';
         html += '<div class="modal-content">';
-        html += '<div class="modal-header">';
-        html += '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
-        if (b.title.length > 0) {
-            html += '<h4 class="modal-title">' + b.title + "</h4>"
-        }
+            html += '<div class="modal-header">';
+                html += '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
+                if (b.title.length > 0) {
+                html += '<h4 class="modal-title">' + b.title + "</h4>"
+                }
+            html += "</div>";
+            html += '<div class="modal-body" ' + c + ">";
+                html += b.message;
+            html += "</div>";
+            html += '<div class="modal-footer">';
+                if (b.closeButton === true) {
+                html += '<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>'
+                }
+            html += "</div>";
         html += "</div>";
-        html += '<div class="modal-body" ' + c + ">";
-        html += b.message;
-        html += "</div>";
-        html += '<div class="modal-footer">';
-        if (b.closeButton === true) {
-            html += '<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>'
-        }
-        html += "</div>";
-        html += "</div>";
-        html += "</div>";
-        html += "</div>";
-        a("body").prepend(html);
-        a("#myModal").modal().on("hidden.bs.modal", function() {
-            a(this).remove()
-        })
-    }
+    html += "</div>";
+html += "</div>";
+a("body").prepend(html);
+a("#myModal").modal().on("hidden.bs.modal", function() {
+a(this).remove()
+})
+}
 })(jQuery);
 
 /*
- * Here is how you use it
- */
+* Here is how you use it
+*/
 $(function() {
 
-    $('.view-pdf').on('click', function() {
-        var pdf_link = $(this).attr('href');
-        var iframe = '<div class="iframe-container"><iframe src="' + pdf_link + '"></iframe></div>'
+$('.view-pdf').on('click', function() {
+var pdf_link = $(this).attr('href');
+var iframe = '<div class="iframe-container"><iframe src="' + pdf_link + '"></iframe></div>'
 
-        $.createModal({
-            title: 'My Title',
-            width: 0,
-            message: iframe,
-            closeButton: true,
-            scrollable: false,
-            buttons: {
-                OK: function() {
-                    alert('PL');
-                }
-            }
-        });
+$.createModal({
+title: 'My Title',
+width: 0,
+message: iframe,
+closeButton: true,
+scrollable: false,
+buttons: {
+OK: function() {
+alert('PL');
+}
+}
+});
 
 
-        return false;
+return false;
 
-    });
+});
 })
 </script>
 
@@ -75,45 +75,62 @@ $(function() {
 body,
 html,
 main {
-    /* important */
-    
-    height: 100%;
+/* important */
+
+height: 100%;
 }
 .cd-fixed-bg {
-    height: 60%;
-    min-height: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
+height: 60%;
+min-height: 100%;
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: center center;
 }
 .cd-fixed-bg.cd-bg-1 {
-    background-image: url("/img/bg-main1.jpg");
+background-image: url("/img/bg-main1.jpg");
 }
 .cd-scrolling-bg {
-    min-height: 100%;
+min-height: 100%;
 }
 .iframe-container {
-    padding-bottom: 60%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
+padding-bottom: 60%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
 }
 .iframe-container iframe,
 .iframe-container object,
 .iframe-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 </style>
 
 
 
 <div class="cd-fixed-bg cd-bg-1">
+    
+</div>
 
+<div class="row" style="background-color: #bbb;">
+    <div class="col-md-4">
+        <img src="" alt="" class="img-responsive"/>
+    </div>
+    
+
+     <div class="wow bounceInRight" data-wow-duration="2s" data-wow-offset="150">
+        <div class="col-md-4">
+            <img src="img/mission.jpg" alt="" class="img-responsive"/>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <img src="" alt="" class="img-responsive"/>
+    </div>
 </div>
 
 <!-- column content -->
@@ -150,9 +167,9 @@ main {
             </div>
         </div>
     </div>
-
-
-
+    
+    
+    
     <div class="container cd-container">
         <div class="row">
             <div class="big-box">
@@ -163,7 +180,7 @@ main {
                                 <div class="align-center">
                                     <a href='http://www.github.com/dharness'>
                                         <img class='fa fa-5x' src="/img/github.svg" width='15%'></img>
-                                        <h4>Dylan's Github</h4>
+                                        <h4>Dyl's Github</h4>
                                     </a>
                                 </div>
                             </div>
@@ -185,9 +202,9 @@ main {
             </div>
         </div>
     </div>
-
-
-
+    
+    
+    
     <div class="container cd-container">
         <div class="row">
             <div class="big-box">
@@ -198,7 +215,7 @@ main {
                                 <div class="align-center">
                                     <a href='http://linkedin.com/in/dhsoftware'>
                                         <img class='fa fa-5x' src="/img/linkedin.svg" width='15%'></img>
-                                        <h4>Dylan's LinkedIn</h4>
+                                        <h4>Dyl's LinkedIn</h4>
                                     </a>
                                 </div>
                             </div>
@@ -220,18 +237,18 @@ main {
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
     <div class="container cd-container">
         <div class="row">
-
+            
         </div>
-
+        
     </div>
 </div>
 </div>
