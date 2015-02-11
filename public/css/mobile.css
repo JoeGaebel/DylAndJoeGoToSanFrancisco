@@ -1,0 +1,11 @@
+@media handheld {
+
+	html {
+	float:none;
+		}
+	.main-content {
+		padding-left: 500px;
+
+	}
+
+}
