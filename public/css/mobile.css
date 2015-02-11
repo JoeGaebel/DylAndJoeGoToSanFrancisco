@@ -1,8 +1,10 @@
 @media handheld {
 
-	* {
-	float:none;
-	padding-left:500px;
-		}
+	
+.center {
+	width: 100% !important;
+	text-align: center;
+	}
+	
 
 }
