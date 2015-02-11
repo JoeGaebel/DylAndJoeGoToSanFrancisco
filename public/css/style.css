@@ -144,7 +144,7 @@ ul.nav-pills  {
 }
 
 .navbar-default {
-	top: 0;
+	top: -10;
 	left: 0;
 	height: 50px;
 	padding-top: 0;
