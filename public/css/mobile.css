@@ -1,11 +1,8 @@
 @media handheld {
 
-	html {
+	* {
 	float:none;
+	padding-left:500px;
 		}
-	.main-content {
-		padding-left: 500px;
-
-	}
 
 }
