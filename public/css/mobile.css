@@ -1,9 +1,9 @@
 @media handheld {
 
 	
-.center {
-	width: 100% !important;
-	text-align: center;
+.align-center {
+	 text-align: center;
+	 
 	}
 	
 
