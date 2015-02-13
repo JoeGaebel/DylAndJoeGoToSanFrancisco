@@ -1,2 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="100px" height="100px" viewBox="5.0 -10.0 100.0 135.0" enable-background="new 0 0 100 100" xml:space="preserve">
-<path d="M5.9,9.777C5.9,4.377,10.276,0,15.676,0c1.677,0,2.74,0.438,4.61,1.182l68.577,39.9c3.189,1.89,4.666,4.927,5.236,8.428  v0.982c-0.57,3.499-2.047,6.537-5.236,8.428L20.287,98.819c-1.871,0.745-2.934,1.181-4.61,1.181c-5.4,0-9.776-4.377-9.776-9.777  V9.777z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="22px" height="22px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<path fill="#FFFFFF" d="M13.784,12.354c0-5.128,4.157-9.285,9.285-9.285c1.592,0,2.602,0.417,4.378,1.123l65.126,37.892
+	c3.026,1.795,4.431,4.68,4.973,8.004v0.934c-0.542,3.323-1.946,6.207-4.973,8.003L27.449,96.915
+	c-1.777,0.707-2.787,1.122-4.378,1.122c-5.128,0-9.285-4.157-9.285-9.284L13.784,12.354L13.784,12.354z"/>
+</svg>
